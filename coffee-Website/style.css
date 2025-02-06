@@ -1,0 +1,390 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lora', serif;
+}
+
+body {
+    background-color: black;
+    color:white;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: url(images/banner.jpg) no-repeat center center/cover;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    position: relative;
+    padding-top: 70px; /* Added padding to account for fixed navbar height */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* Changed to fixed position */
+    top: 0; /* Fixed to the top */
+    width: 100%; /* Full width */
+    padding: 20px 50px;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 100; /* Ensure navbar is above other content */
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.logo1{
+    width: 50px;
+    height: 60px;
+}
+.navlinks {
+    list-style: none;
+    display: flex;
+}
+
+.navlinks li {
+    margin: 0 15px;
+}
+
+.navlinks a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.navlinks a:hover {
+    background-color: aliceblue;
+    color: black;
+    padding: 7px;
+    border-radius: 3px;
+    border-top-right-radius: none;
+}
+
+.bannertxt h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: aliceblue;
+}
+
+.bannertxt p {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background: #ff9800;
+    color: white;
+    border: none;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #d47f00;
+}
+
+
+/* Menu Section */
+#Menu {
+    padding: 50px;
+    text-align: center;
+    color: black;
+}
+
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.menu-item {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+}
+
+.menu-item h3 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    color: black;
+}
+
+.menu-item  p{
+    font-size: 1rem;
+    color:black;
+}
+
+.menu-item span {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #d47f00;
+}
+.Rupee{
+    font-weight: bold;
+    font-size: 1rem ;
+    color: black;
+}
+
+
+#About-section {
+    max-width:1200px;
+    margin: 0 auto;
+    padding:20px;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    color: black;
+    padding:50px;
+}
+
+#About-section h1{
+
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 2rem;
+
+}
+.content{
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+    align-items: center;
+
+}
+
+.text-content{
+    line-height:1.6 ;
+
+}
+.text-content p{
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+.image-content{
+    flex:1;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.shopimag{
+    border-radius: 30px;
+    width: 100%;
+    height: auto;
+
+}
+
+
+#Contact {
+    padding: 50px;
+    text-align: center;
+    background-color: #f8f1e4;
+}
+.c{
+    color:black;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+}
+
+input, textarea {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button {
+    padding: 10px;
+    background:black;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background:#28a745;
+}
+
+footer {
+    background:A5A391;
+    color:white;
+    text-align: center;
+    padding: 10px;
+
+}
+.contact-email a {
+    text-decoration: none;
+    color: white;
+
+}
+.contact-email a:hover{
+    background-color: #28a745;
+}
+
+
+/* Media Queries for Responsiveness */
+
+/* For Mobile Devices (up to 767px) */
+@media (max-width: 767px) {
+    header {
+        height: auto;
+        padding-bottom: 50px;
+        padding-top: 120px; /* Added padding to account for fixed navbar height in mobile view */
+    }
+
+    nav {
+        flex-direction: column;
+        padding: 10px 20px; /* Reduced padding for mobile nav */
+    }
+
+    .logo {
+        font-size: 1.7rem;
+    }
+
+    .navlinks {
+        flex-direction: column;
+        margin-top: 10px;
+        text-align: center; /* Center align nav links on mobile */
+    }
+
+    .navlinks li {
+        margin: 10px 0; /* Increase vertical margin for nav links */
+    }
+
+    .navlinks a {
+        font-size: 1.1rem;
+    }
+
+    .bannertxt h1 {
+        font-size: 2.5rem;
+    }
+
+    .bannertxt p {
+        font-size: 1.2rem;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    #Menu {
+        padding: 30px; /* Reduce padding for smaller screens */
+    }
+
+    .menu-container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust minmax for smaller items */
+    }
+
+    .menu-item h3 {
+        font-size: 1.2rem; /* Smaller font size for menu item titles */
+    }
+    .menu-item p, .menu-item span, .Rupee {
+        font-size: 0.9rem; /* Smaller font size for menu item text */
+    }
+
+    #About-section {
+        padding: 30px; /* Reduce padding for smaller screens */
+    }
+    .content{
+        flex-direction: column; /* Stack content vertically on smaller screens */
+        text-align: center; /* Center text in about section on mobile */
+    }
+    .image-content{
+        margin-top: 20px; /* Add margin above image when stacked */
+    }
+
+
+    #Contact {
+        padding: 30px; /* Reduce padding for smaller screens */
+    }
+
+    form {
+        width: 90%; /* Form takes up more width on smaller screens */
+    }
+}
+
+/* For Tablets (min-width: 768px and max-width: 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    header {
+        height: auto; /* Adjust header height for tablets if needed */
+        padding-bottom: 40px;
+        padding-top: 120px; /* Added padding to account for fixed navbar height in tablet view */
+    }
+    nav {
+        padding: 20px 30px; /* Adjust nav padding for tablets */
+    }
+    .logo {
+        font-size: 1.8rem;
+    }
+    .navlinks li {
+        margin: 0 10px; /* Adjust nav link spacing for tablets */
+    }
+    .navlinks a {
+        font-size: 1.1rem;
+    }
+    .bannertxt h1 {
+        font-size: 2.8rem;
+    }
+    .bannertxt p {
+        font-size: 1.3rem;
+    }
+    #Menu {
+        padding: 40px; /* Adjust menu padding for tablets */
+    }
+    .menu-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust minmax for tablet menu items */
+    }
+    #About-section {
+        padding: 40px; /* Adjust about padding for tablets */
+    }
+    #Contact {
+        padding: 40px; /* Adjust contact padding for tablets */
+    }
+    form {
+        width: 70%; /* Form width for tablets */
+    }
+}
+
+/* For larger tablets and desktops (min-width: 992px) - Styles are already defined in the non-media query section for larger screens, so you may not need to add much here unless you want to make specific adjustments for larger screens. */
+@media (min-width: 992px) {
+    header {
+        padding-top: 70px; /* Adjust header padding for desktop view if needed */
+    }
+    /* You can add specific styles for desktop/larger screens if needed */
+    /* For example, if you want to further adjust the menu layout or font sizes on desktop */
+}
